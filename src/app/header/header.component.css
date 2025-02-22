@@ -24,10 +24,18 @@
   .nav-links li a {
     color: #fff;
     font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
   }
   
   .nav-links li a:hover {
     text-decoration: underline;
+  }
+
+  .nav-links li a.active {
+    background-color: #fff;
+    color: #007bff;
   }
   
   .logout-btn {
