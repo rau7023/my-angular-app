@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../globalComponent/button/button.component';
 
 @Component({
   selector: 'app-protected',
@@ -8,6 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './protected.component.html',
   styleUrls: ['./protected.component.css']
 })
-export class ProtectedComponent {}
+
+export class ProtectedComponent {
+
+  getData(data: any){
+    debugger;
+  }
+}
 
 

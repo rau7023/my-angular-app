@@ -17,5 +17,16 @@
       </a>
     </li>
   </ul>
-  <button class="logout-btn" (click)="logout()">Logout</button>
+
+  <app-button 
+    (click)="logout()"
+    [btnText]="'Logout'" 
+    [btnSize]="'lg'" 
+    [btnColor]="'success'" 
+    [btnVariant]="'solid'" 
+    [isRounded]="true"
+    [isDisabled]="false"
+  ></app-button>
+
+  <!-- <button class="logout-btn" (click)="logout()">Logout</button> -->
 </nav>
