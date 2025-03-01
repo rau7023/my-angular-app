@@ -7,7 +7,7 @@ export class AuthService {
   login(credentials: { username: string; password: string }): Promise<{ success: boolean }> {
     return new Promise((resolve) => {
       setTimeout(() => {
-        if (credentials.username === 'raushan04' && credentials.password === '12345') {
+        if (credentials.username === '' && credentials.password === '') {
           this.loggedIn = true;
           resolve({ success: true });
         } else {

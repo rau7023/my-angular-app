@@ -16,7 +16,7 @@ export class ButtonComponent {
   @Input() btnVariant: string = ''; //types: outline, solid 
   @Input() btnText: string= '';
 
-  @Output() onBtnClick = new EventEmitter<any>();
+  @Output() onBtnClick = new EventEmitter<Event>();
 
   buttonClass!: string;
 
@@ -31,9 +31,9 @@ export class ButtonComponent {
     }
   }
 
-  onClick(){
+  onClick(event: Event){
     debugger;
-    this.onBtnClick.emit("Hi, I am Raushan.")
+    this.onBtnClick.emit(event);
   }
 }
 

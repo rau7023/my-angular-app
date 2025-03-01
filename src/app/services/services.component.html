@@ -1,0 +1,71 @@
+<div class="card-container">
+  <div class="card" *ngFor="let post of posts">
+    <div *ngIf="post.isEditing">
+      <div class="card-header">
+        <input type="text" [(ngModel)]="post.title" placeholder="Edit Title" />
+      </div>
+      <div class="card-body">
+        <textarea [(ngModel)]="post.body" placeholder="Edit Body"></textarea>
+      </div>
+      <div class="card-footer">
+        <app-button 
+          (onBtnClick)="savePost(post)"
+          [btnText]="'Save'" 
+          [btnSize]="'lg'" 
+          [btnColor]="'primary'" 
+          [btnVariant]="'solid'" 
+          [isRounded]="false"
+          [isDisabled]="false"
+        ></app-button>
+        <app-button 
+          (onBtnClick)="cancelEdit(post)"
+          [btnText]="'Cancel'" 
+          [btnSize]="'lg'" 
+          [btnColor]="'error'" 
+          [btnVariant]="'solid'" 
+          [isRounded]="false"
+          [isDisabled]="false"
+        ></app-button>
+      </div>
+    </div>
+    
+    <div *ngIf="!post.isEditing">
+      <div class="card-header">
+        <h3>{{ post.title }}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{ post.body }}</p>
+      </div>
+      <div class="card-footer">
+        <app-button 
+          (onBtnClick)="viewPost(post.id)"
+          [btnText]="'View'" 
+          [btnSize]="'lg'" 
+          [btnColor]="'success'" 
+          [btnVariant]="'solid'" 
+          [isRounded]="true"
+          [isDisabled]="false"
+        ></app-button>
+        <app-button 
+          (onBtnClick)="enableEdit(post)"
+          [btnText]="'Edit'" 
+          [btnSize]="'lg'" 
+          [btnColor]="'warning'" 
+          [btnVariant]="'solid'" 
+          [isRounded]="true"
+          [isDisabled]="false"
+        ></app-button>
+        <app-button 
+          (onBtnClick)="deletePost(post.id)"
+          [btnText]="'Delete'" 
+          [btnSize]="'lg'" 
+          [btnColor]="'error'" 
+          [btnVariant]="'solid'" 
+          [isRounded]="true"
+          [isDisabled]="false"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+

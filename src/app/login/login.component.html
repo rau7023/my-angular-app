@@ -13,9 +13,10 @@
       </label>
       <br>
 
-      <app-button 
+      <app-button
+        (onBtnClick)="onLogin()" 
         [btnText]="'Login'" 
-        [btnSize]="'lg'" 
+        [btnSize]="'xl'" 
         [btnColor]="'success'" 
         [btnVariant]="'solid'" 
         [isRounded]="true"

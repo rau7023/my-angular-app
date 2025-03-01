@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { ProtectedComponent } from './protected/protected.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ServicesComponent } from './services/services.component';
 import { AuthGuard } from './auth/auth.guard';
 
 export const routes: Routes = [
@@ -10,6 +11,7 @@ export const routes: Routes = [
   { path: 'protected', component: ProtectedComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent },
+  { path: 'services', component: ServicesComponent },
   { path: '', redirectTo: '/protected', pathMatch: 'full' },
   { path: '**', redirectTo: '/login' }
 ];

@@ -16,10 +16,15 @@
         Contact
       </a>
     </li>
+    <li>
+      <a routerLink="/services" routerLinkActive="active">
+        Services
+      </a>
+    </li>
   </ul>
 
   <app-button 
-    (click)="logout()"
+    (onBtnClick)="logout()"
     [btnText]="'Logout'" 
     [btnSize]="'lg'" 
     [btnColor]="'success'" 

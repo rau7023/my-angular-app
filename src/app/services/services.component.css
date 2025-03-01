@@ -1,0 +1,47 @@
+.card-container {
+  margin: 20px;
+  padding:20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff; 
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}  
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer button:hover {
+  background-color: #115293;
+}
+
+.card-header input {
+  width: 100%;              
+  font-size: 18px;         
+  padding: 10px;            
+  box-sizing: border-box;   
+}
+
+.card-body textarea {
+  width: 100%;              
+  font-size: 16px;         
+  padding: 10px;           
+  min-height: 150px;       
+  box-sizing: border-box;   
+}
+
+  
